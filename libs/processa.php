@@ -10,8 +10,8 @@ $email = filter_input(INPUT_POST,'email', FILTER_SANITIZE_EMAIL);
 // echo "E-mail: $email <br>";
 
 
-$dados_usuario = "INSERT INTO usuarios (nome,email,criado) VALUES ('$nome', '$email', NOW())";
-$resultado_usuario = mysqli_query($conn, $dados_usuario);
+$result_usuarios = "INSERT INTO usuarios (nome,email,criado) VALUES ('$nome', '$email', NOW())";
+$resultado_usuario = mysqli_query($conn, $result_usuarios);
 
 if (mysqli_insert_id($conn)) {
 $_SESSION['msg'] = "<p style='color:green;'>Usuário cadastrado com sucesso</p>";

@@ -1,5 +1,10 @@
 <?php
 session_start();
+include_once("../libs/conexao.php");
+$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+$result_usuario = "SELECT * FROM usuarios WHERE id = '$id'";
+$resultado_usuario = mysqli_query($conn, $result_usuario);
+$row_usuario = mysqli_fetch_assoc($resultado_usuario);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -10,7 +15,7 @@ session_start();
   <script type="text/javascript" src="../js/validacao.js">
 
   </script>
-  <title>Formulario</title>
+  <title>Editar</title>
 </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -60,24 +65,24 @@ session_start();
                   </div>
           </div>
       </nav>
-    <h1>Cadastrar Usuário</h1>
+    <h1>Editar Usuário</h1>
     <?php
 if (isset($_SESSION['msg'])) {
   echo $_SESSION['msg'];
   unset ($_SESSION['msg']);
 }
      ?>
-    <form name="form" action="../libs/processa.php" method="post" onsubmit="return validacao();">
-      <label>Nome: </label>
-      <input type="text" name="nome" placeholder="Digite o nome completo">
-      <br><br>
-      <label>E-mail: </label>
-      <input type="email" name="email" placeholder="Digite o seu principal e-mail">
-      <br><br>
+     <form method="POST" action="../libs/proc_edita_usuario.php">
+ 			<input type="hidden" name="id" value="<?php echo $row_usuario['id']; ?>">
 
-      <input type="submit" value="Cadastrar">
+ 			<label>Nome: </label>
+ 			<input type="text" name="nome" placeholder="Digite o nome completo" value="<?php echo $row_usuario['nome']; ?>"><br><br>
 
-    </form>
+ 			<label>E-mail: </label>
+ 			<input type="email" name="email" placeholder="Digite o seu melhor e-mail" value="<?php echo $row_usuario['email']; ?>"><br><br>
+
+ 			<input type="submit" value="Editar">
+ 		</form>
 
 
 

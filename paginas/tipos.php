@@ -9,7 +9,7 @@
   <title>Tipos</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand h1 mb-0" href="#">Malte&Lúpulo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navebarSite">

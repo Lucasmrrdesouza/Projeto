@@ -1,5 +1,5 @@
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand h1 mb-0" href="#">Malte&Lúpulo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navebarSite">
@@ -26,9 +26,19 @@
                     <li class="nav-item">
                       <a class="nav-link" href="paginas/tipos.php">Tipos</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="paginas/formulario.php">Cadastrar</a>
-                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
+                      Usuário
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="paginas/formulario.php">Cadastrar</a>
+                      <a class="dropdown-item" href="paginas/listar.php">Listar</a>
+                      <a class="dropdown-item" href="paginas/edit_usuario.php">Editar</a>
+
+                    </div>
+                  </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                   <li class="nav-item dropdown">
