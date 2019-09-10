@@ -29,14 +29,13 @@
                 </ul>
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDropUsuario">
                       Usuário
                     </a>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="paginas/formulario.php">Cadastrar</a>
                       <a class="dropdown-item" href="paginas/listar.php">Listar</a>
-                      <a class="dropdown-item" href="paginas/edit_usuario.php">Editar</a>
-
+                      <a class="dropdown-item" href="paginas/testeTabela.php">Tabela</a>
                     </div>
                   </li>
                 </ul>
@@ -90,7 +89,7 @@
             <img src="imagens/slide-03.jpg" class="img-fluid  d-block w-100">
             <div class="carousel-caption d-none d-md-block text-white">
               <h3>Cerveja combina com amigos</h3>
-              <p>Já chamou seu(ua) parceirx pra tomar uma?</p>
+              <p>Já chamou xs parceirxs pra tomar uma?</p>
             </div>
           </div>
         </div>

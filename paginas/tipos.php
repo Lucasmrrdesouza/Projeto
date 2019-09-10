@@ -36,9 +36,17 @@
                     <li class="nav-item">
                       <a class="nav-link" href="tipos.php">Tipos</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="formulario.php">Cadastrar</a>
-                    </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDropUsuario">
+                            Usuário
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="formulario.php">Cadastrar</a>
+                            <a class="dropdown-item" href="listar.php">Listar</a>
+                            <a class="dropdown-item" href="testeTabela.php">Tabela</a>
+                          </div>
+                        </li>
+
                 </ul>
                 <ul class="navbar-nav ml-auto">
                   <li class="nav-item dropdown">
@@ -76,10 +84,10 @@
       </div>
 
 
-    <script src="js/jquery-3.4.1.js" ></script>
-    <script src="js/popper.min.js"></script>
-    <script src="bootstrap/bootstrap.min.js"></script>
 
 </body>
 
+<script src="../js/jquery-3.4.1.js" ></script>
+<script src="../js/popper.min.js"></script>
+<script src="../bootstrap/bootstrap.min.js"></script>
 </html>

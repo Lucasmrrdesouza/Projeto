@@ -39,6 +39,17 @@ include_once("../libs/conexao.php");
                         <li class="nav-item">
                           <a class="nav-link" href="tipos.php">Tipos</a>
                         </li>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDropUsuario">
+                                Usuário
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="formulario.php">Cadastrar</a>
+                                <a class="dropdown-item" href="listar.php">Listar</a>
+                                <a class="dropdown-item" href="testeTabela.php">Tabela</a>
+                              </div>
+                            </li>
+
                     </ul>
                     <ul class="navbar-nav ml-auto">
                       <li class="nav-item dropdown">
@@ -79,6 +90,8 @@ $inicio = ($qnt_result_pg * $pagina)- $qnt_result_pg;
 
 $result_usuarios = "SELECT * FROM usuarios LIMIT $inicio, $qnt_result_pg";
 $resultado_usuarios = mysqli_query($conn,$result_usuarios);
+
+//Obtem uma linha do conjunto de resultados como uma matriz associativa
 while ($row_usuario = mysqli_fetch_assoc($resultado_usuarios)) {
   echo "ID: ".$row_usuario ['id']."<br>";
   echo "Nome: ".$row_usuario ['nome']."<br>";
@@ -92,7 +105,6 @@ while ($row_usuario = mysqli_fetch_assoc($resultado_usuarios)) {
 $result_pg = "SELECT COUNT(id) AS num_result FROM usuarios";
 $resultado_pg = mysqli_query($conn,$result_pg);
 $row_pg =  mysqli_fetch_assoc ($resultado_pg);
-//echo $row_pg['num_result'];
 // Quantidade de paginas
 $quantidade_pg = ceil($row_pg['num_result']/$qnt_result_pg);
 
@@ -124,8 +136,8 @@ echo "<a href='listar.php?pagina=$quantidade_pg'> última</a>";
 
 
 
-    <script src="js/jquery-3.4.1.js" ></script>
-    <script src="js/popper.min.js"></script>
-    <script src="bootstrap/bootstrap.min.js"></script>
   </body>
+  <script src="../js/jquery-3.4.1.js" ></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../bootstrap/bootstrap.min.js"></script>
 </html>
