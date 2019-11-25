@@ -27,18 +27,7 @@
                       <a class="nav-link" href="paginas/tipos.php">Tipos</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDropUsuario">
-                      Usuário
-                    </a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="paginas/formulario.php">Cadastrar</a>
-                      <a class="dropdown-item" href="paginas/listar.php">Listar</a>
-                      <a class="dropdown-item" href="paginas/testeTabela.php">Tabela</a>
-                    </div>
-                  </li>
-                </ul>
+
                 <ul class="navbar-nav ml-auto">
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
@@ -55,6 +44,19 @@
                   <input class="form-control ml-4 mr-2" type="search" placeholder="Buscar...">
                   <button class="btn btn-dark" type="submit">Ok</button>
                 </form>
+
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle ml-4" href="#" data-toggle="dropdown" id="navDropUsuario">
+                      Usuário
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="paginas/formulario.php">Cadastrar</a>
+                      <a class="dropdown-item" href="paginas/listar.php">Listar</a>
+                      <a class="dropdown-item" href="paginas/testeTabela.php">Tabela</a>
+                    </div>
+                  </li>
+                </ul>
               </div>
       </div>
   </nav>
@@ -89,7 +91,7 @@
             <img src="imagens/slide-03.jpg" class="img-fluid  d-block w-100">
             <div class="carousel-caption d-none d-md-block text-white">
               <h3>Cerveja combina com amigos</h3>
-              <p>Já chamou xs parceirxs pra tomar uma?</p>
+              <p>Já chamou os(as) parceiros(as) pra tomar uma?</p>
             </div>
           </div>
         </div>
